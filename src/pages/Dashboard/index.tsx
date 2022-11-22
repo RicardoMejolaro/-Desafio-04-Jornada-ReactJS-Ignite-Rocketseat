@@ -1,5 +1,7 @@
 import { Component } from 'react';
 
+import { Food } from '../../types/types';
+
 import Header from '../../components/Header';
 import api from '../../services/api';
 import Food from '../../components/Food';
@@ -80,7 +82,7 @@ class Dashboard extends Component {
     this.setState({ editModalOpen: !editModalOpen });
   }
 
-  handleEditFood = food => {
+  handleEditFood = (food: Food) => {
     this.setState({ editingFood: food, editModalOpen: true });
   }
 
