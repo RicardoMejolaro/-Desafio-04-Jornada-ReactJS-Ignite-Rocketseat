@@ -8,7 +8,7 @@ import { Container } from './styles';
 import api from '../../services/api';
 
 export function Food({ food, handleDelete, handleEditFood }: FoodComponent) {
-  const [isAvailable, setIsAvailable] = useState(food.available);
+  const [isAvailable, setIsAvailable] = useState<boolean>(food.available);
 
   const toggleAvailable = async () => {
     await api.put(`/foods/${food.id}`, {

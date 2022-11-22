@@ -1,7 +1,10 @@
 import styled, { css } from 'styled-components';
-import { Food } from '../../types/types';
 
-export const Container = styled.div<Food>`
+type Available = {
+  available: boolean;
+};
+
+export const Container = styled.div`
   background: #f0f0f5;
   border-radius: 8px;
 
@@ -13,7 +16,7 @@ export const Container = styled.div<Food>`
     transition: 0.3s opacity;
     text-align: center;
 
-    ${props =>
+    ${(props: Available) =>
     !props.available &&
     css`
         opacity: 0.3;
