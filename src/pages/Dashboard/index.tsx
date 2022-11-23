@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 import { FoodProps } from '../../types/types';
 
-import Header from '../../components/Header';
+import { Header } from '../../components/Header';
 import api from '../../services/api';
 import { Food } from '../../components/Food';
 import ModalAddFood from '../../components/ModalAddFood';
@@ -109,5 +109,3 @@ export function Dashboard() {
     </>
   );
 };
-
-export default Dashboard;
